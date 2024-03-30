@@ -1,0 +1,8 @@
+venv
+data
+.cache
+.idea
+wandb
+tmp
+__pycache__
+.pytest_cache

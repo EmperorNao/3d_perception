@@ -1,0 +1,9 @@
+BASE_LINK: https://wiselab.uwaterloo.ca/cadcd_data/
+
+DATA:
+  '2018_03_06':
+    - '0001'
+    - '0002'
+  '2018_03_07':
+    - '0001'
+    - '0002'

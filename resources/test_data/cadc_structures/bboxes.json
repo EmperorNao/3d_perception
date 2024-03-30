@@ -1,0 +1,1 @@
+[{"cuboids": [{"uuid": "10eb0d25-d5ba-446b-a6fc-b1e1c29e0499", "label": "Truck", "position": {"x": -19.10966344067156, "y": -0.9994196630418124, "z": -0.28325530444985225}, "dimensions": {"x": 2.609, "y": 21.222, "z": 4.31}, "yaw": 0.2475953980193629, "stationary": false, "camera_used": 7, "attributes": {"state": "Moving", "truck_type": "Semi_Truck"}, "points_count": 2395}]}]
