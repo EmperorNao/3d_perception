@@ -1,5 +1,5 @@
 import numpy as np
-from dataset.cadc import CadcDataset, CadcBBox, CadcLidarCloud, CadcIntrinsics
+from .cadc import CadcDataset, CadcBBox, CadcLidarCloud, CadcIntrinsics
 
 
 def test_bbox_load(cuboid):

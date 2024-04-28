@@ -3,3 +3,8 @@ PyYAML
 numpy
 pillow
 pytest
+PyQt5
+vispy
+matplotlib
+opencv-python
+nuscenes-devkit

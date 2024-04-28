@@ -8,7 +8,7 @@ from PIL import Image as PILImage
 from typing import List, Callable
 from dataclasses import dataclass
 
-from dataset.structures import (
+from .structures import (
     Scene, SceneID, RideID, Camera, Image,
     LidarCloud, BBox, Transform, GT3D
 )
@@ -35,10 +35,6 @@ class CadcBBox(BBox):
 
 @dataclass
 class CadcLidarCloud(LidarCloud):
-
-    @property
-    def xyz(self):
-        return self.points[:, :3]
 
     @property
     def intensity(self):
@@ -108,7 +104,7 @@ class CadcDataset:
                 ))
 
                 for scene_idx, scene_id in enumerate(scene_ids):
-                    if not grep(SceneID(ride_id, scene_id)):
+                    if grep and not grep(SceneID(ride_id, scene_id)):
                         continue
                     cameras = []
                     for camera_idx in range(CadcDataset.NUMBER_OF_CAMERAS):

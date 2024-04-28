@@ -13,6 +13,39 @@ class BBox:
     yaw: float
     stationary: bool
 
+    @property
+    def cx(self):
+        return self.position[0]
+
+    @property
+    def cy(self):
+        return self.position[1]
+
+    @property
+    def cz(self):
+        return self.position[2]
+
+    @property
+    def dx(self):
+        return self.dimensions[0] / 2
+
+    @property
+    def dy(self):
+        return self.dimensions[1] / 2
+
+    @property
+    def dz(self):
+        return self.dimensions[2] / 2
+
+    @property
+    def vertices_2d(self):
+        return np.array([
+            [self.cx - self.dx, self.cy - self.dy],
+            [self.cx - self.dx, self.cy + self.dy],
+            [self.cx + self.dx, self.cy + self.dy],
+            [self.cx + self.dx, self.cy - self.dy],
+        ])
+
 
 @dataclass
 class GT3D:
@@ -49,6 +82,10 @@ class Camera:
 @dataclass
 class LidarCloud:
     points: np.array
+
+    @property
+    def xyz(self):
+        return self.points[:, :3]
 
 
 @dataclass
